@@ -8,6 +8,8 @@ A theme developed for our blog which is http://blog.ambitionbox.com. The theme i
 
 &nbsp;
 
+![screenshot-desktop](https://raw.githubusercontent.com/subramanya92/Ambitionbox-Blog-theme/master/sample-post-screenshot.png)
+
 **The main files are:**
 
 - `default.hbs` - The main template file
