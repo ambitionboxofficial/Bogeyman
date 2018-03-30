@@ -1,0 +1,55 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{!-- The big featured header, it uses blog cover image as a BG if available --}}
+<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+    <div class="inner">
+        <div class="site-header-content">
+            <h1 class="site-title">
+                {{#if @blog.logo}}
+                    <img class="site-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+                {{else}}
+                    {{@blog.title}}
+                {{/if}}
+            </h1>
+            <h2 class="site-description">{{@blog.description}}</h2>
+        </div>
+        {{> "site-nav"}}
+    </div>
+</header>
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        {{!-- Single large feature post --}}
+        {{#get "posts" limit="1" include="author,tags" filter="featured:true"}}
+            <div class="featured-post">
+                {{#foreach posts}}
+                     {{> "post-card"}}
+                {{/foreach}}
+            </div>
+        {{/get}}
+        {{!-- Feed grouped by the tags --}}
+        {{#get "tags" limit="10" include="count.posts"  order="count.posts desc" }}
+            {{#foreach tags as |category|}}
+                {{#get "posts" limit="3" include="author" filter="primary_tag:{{slug}}+featured:false" order="published_at desc"}}
+                    {{#foreach posts}}
+                        {{!-- Only if there is at least one post in that tag  --}}
+                        {{#if @first}}
+                            {{#category}}
+                                <div class="tag-group" >
+                                    <span  class="title">{{name}} ({{count.posts}})</span>
+                                    <a class="see-all" href="{{url}}" >See all</a>
+                                </div>
+                            {{/category}}
+                            <div class="post-feed-3column">
+                        {{/if}}
+                        {{> "post-card"}}
+                    {{/foreach}}
+                    </div>
+                {{/get}}
+            {{/foreach}}
+        {{/get}}
+    </div>
+</main>
