@@ -1,6 +1,6 @@
-# AmbitionBox theme
+# Bogeyman theme for Ghost blogging
 
-A theme developed for our blog which is http://blog.ambitionbox.com. The theme is developed on top of default [Ghost](http://github.com/tryghost/ghost/) theme which is [Casper](https://github.com/TryGhost/Casper) and [Attila](https://github.com/zutrinken/attila)
+The theme is developed on top of default [Ghost](http://github.com/tryghost/ghost/) theme which is [Casper](https://github.com/TryGhost/Casper) and [Attila](https://github.com/zutrinken/attila). You can see the [demo](http://blog.ambitionbox.com).
 
 &nbsp;
 
