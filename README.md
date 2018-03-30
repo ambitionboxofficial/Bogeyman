@@ -1,19 +1,12 @@
 # AmbitionBox theme
 
-
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
-
-&nbsp;
-
-![screenshot-desktop](http://user-images.githubusercontent.com/120485/27221326-1e31d326-5280-11e7-866d-82d550a7683b.jpg)
+A theme developed for our blog which is http://blog.ambitionbox.com. The theme is developed on top of default [Ghost](http://github.com/tryghost/ghost/) theme which is [Casper](https://github.com/TryGhost/Casper) and [Attila](https://github.com/zutrinken/attila)
 
 &nbsp;
 
-# First time using a Ghost theme?
+![screenshot-desktop](https://raw.githubusercontent.com/subramanya92/Ambitionbox-Blog-theme/master/Screenshot.png)
 
-Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
-
-We've documented our default theme pretty heavily so that it should be fairly easy to work out what's going on just by reading the code and the comments. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://themes.ghost.org) which explains every possible Handlebars helper and template.
+&nbsp;
 
 **The main files are:**
 
