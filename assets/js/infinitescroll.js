@@ -75,9 +75,9 @@ $(function ($) {
             ticking = false;
         });
     }
-
-    window.addEventListener('scroll', onScroll, {passive: true});
-    window.addEventListener('resize', onResize);
-
-    infiniteScroll();
+    if($result.length > 0){
+        window.addEventListener('scroll', onScroll, {passive: true});
+        window.addEventListener('resize', onResize);    
+        infiniteScroll();
+    }
 });
