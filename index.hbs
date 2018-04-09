@@ -46,8 +46,10 @@ into the {body} of the default.hbs template --}}
                             <div class="post-feed-3column">
                         {{/if}}
                         {{> "post-card"}}
+                        {{#if @last}}
+                            </div>
+                        {{/if}}
                     {{/foreach}}
-                    </div>
                 {{/get}}
             {{/foreach}}
         {{/get}}
