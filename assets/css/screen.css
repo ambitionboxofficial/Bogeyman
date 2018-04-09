@@ -1054,7 +1054,8 @@ Usage (In Ghost editor):
 }
 
 .post-full-content h2 {
-    margin: 0.5em 0 0.2em 0;
+    /*margin: 0.5em 0 0.2em 0;*/
+    margin: 1.5em 0 .5em;
     font-size: 3.6rem;
     font-weight: 700;
 }
