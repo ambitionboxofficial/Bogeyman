@@ -560,7 +560,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     }
 
     .home-template .featured-post .post-card:nth-child(6n+1):not(.no-image) .post-card-content {
-        flex: 0 1 357px;
+        flex: 0 1 400px;
     }
 
     .home-template .featured-post .post-card:nth-child(6n+1):not(.no-image) h2 {
