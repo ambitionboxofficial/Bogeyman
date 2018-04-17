@@ -28,16 +28,12 @@ into the {body} of the default.hbs template --}}
         <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
             <section class="post-full-content">
                 {{content}}
+                <div id="post-tags">
+                    {{tags separator="   "}}
+                </div>
             </section>
-
-            {{!-- Email subscribe form at the bottom of the page --}}
-            {{#if @labs.subscribers}}
-            <section class="subscribe-form">
-                <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
-                <p>Get the latest posts delivered right to your inbox</p>
-                {{subscribe_form placeholder="youremail@example.com"}}
-            </section>
-            {{/if}}
+            
+            
 
             <footer class="post-full-footer">
                 {{!-- Everything inside the #author tags pulls data from the author --}}
@@ -62,13 +58,22 @@ into the {body} of the default.hbs template --}}
 
                 {{/author}}
             </footer>
-
+            
+            {{!-- Email subscribe form at the bottom of the page --}}
+            {{#if @labs.subscribers}}
+            <section class="subscribe-form">
+                <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
+                <p>Get the latest posts delivered right to your inbox</p>
+                {{subscribe_form placeholder="youremail@example.com"}}
+            </section>
+            {{/if}}
+            
             {{!--
 
             If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id.
-
+            --}}
             <section class="post-full-comments">
                 <div id="disqus_thread"></div>
                 <script>
@@ -78,13 +83,13 @@ into the {body} of the default.hbs template --}}
                     };
                     (function() {
                         var d = document, s = d.createElement('script');
-                        s.src = 'https://test-apkdzgmqhj.disqus.com/embed.js';
+                        s.src = 'https://naukri-blog.disqus.com/embed.js';
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
                 </script>
             </section>
-            --}}
+          
 
         </article>
 

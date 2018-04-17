@@ -875,7 +875,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content dl,
 .post-full-content pre,
 .post-full-content blockquote,
-.post-full-comments,
 .footnotes {
     min-width: 100%;
 }
@@ -1206,18 +1205,27 @@ Usage (In Ghost editor):
     padding: 6px 12px;
     border: color(var(--whitegrey) l(-1%) s(-5%)) 1px solid;
 }
-
+#post-tags a{
+    box-shadow: none;
+    background-color: #3eb0ef2b;
+    padding: 0.3em 0.8em;
+    margin-right: 0.5em;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom:0.5em;
+}
 
 /* 7.1. Subscribe Form
 /* ---------------------------------------------------------- */
 
 .subscribe-form {
-    margin: 1.5em 0;
+    margin: 1.5em auto;
     padding: 6.5vw 7vw 7vw;
     border: color(var(--whitegrey) l(+2%)) 1px solid;
     text-align: center;
     background: color(var(--whitegrey) l(+4%));
     border-radius: 7px;
+    max-width: 840px;
 }
 
 .subscribe-form-title {
