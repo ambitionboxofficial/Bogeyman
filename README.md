@@ -4,11 +4,21 @@ The theme is developed on top of default [Ghost](http://github.com/tryghost/ghos
 
 &nbsp;
 
+## screenshots
+
+### 1. Landing page
+The posts are grouped by their primary tag (first tag), Showing the count and see more link which will take the user to the tag page
+
 ![screenshot-desktop](https://raw.githubusercontent.com/subramanya92/Ambitionbox-Blog-theme/master/Screenshot.png)
 
-&nbsp;
+### 2. Post page
+The disqus comments are enabled by default, you could comment out the code. Just replace with your embed code from disqus.
 
 ![screenshot-desktop](https://raw.githubusercontent.com/subramanya92/Ambitionbox-Blog-theme/master/sample-post-screenshot.png)
+
+![screenshot-desktop](https://raw.githubusercontent.com/subramanya92/Ambitionbox-Blog-theme/master/post_bottom_screenshot.png)
+
+
 
 **The main files are:**
 
