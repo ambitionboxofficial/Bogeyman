@@ -116,8 +116,12 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     color: #fff;
-    background: color(var(--darkgrey) l(-5%)) no-repeat center center;
     background-size: cover;
+    background: var(--darkblue); /* Old browsers */
+    background: -moz-linear-gradient(left, var(--darkblue) 0%, var(--darkblue2) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, var(--darkblue) 0%,var(--darkblue2) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, var(--darkblue) 0%,var(--darkblue2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e122c', endColorstr='#10224f',GradientType=1 ); 
 }
 
 .site-header:before {
