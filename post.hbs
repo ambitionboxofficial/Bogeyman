@@ -3,11 +3,13 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<header class="site-header outer">
-    <div class="inner">
-        {{> "site-nav"}}
-    </div>
-</header>
+{{^has window.location.href="variant=lite" }}
+    <header class="site-header outer">
+        <div class="inner">
+            {{> "site-nav"}}
+        </div>
+    </header>
+{{/has}}
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
@@ -28,9 +30,11 @@ into the {body} of the default.hbs template --}}
         <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
             <section class="post-full-content">
                 {{content}}
+                {{^has window.location.href="variant=lite" }}
                 <div id="post-tags">
                     {{tags separator="   "}}
                 </div>
+                {{/has}}
             </section>
             
             
@@ -66,25 +70,28 @@ into the {body} of the default.hbs template --}}
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id.
             --}}
-            <section class="post-full-comments">
-                {{> "facebook-comments"}}
-            </section>
-            
-            {{!-- Email subscribe form at the bottom of the page --}}
-            {{#if @labs.subscribers}}
-            <section class="subscribe-form">
-                <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
-                <p>Get the latest posts delivered right to your inbox</p>
-                {{subscribe_form placeholder="youremail@example.com"}}
-            </section>
-            {{/if}}
-
+            {{^has window.location.href="variant=lite" }}
+                <section class="post-full-comments">
+                    {{> "facebook-comments"}}
+                </section>
+                
+                {{!-- Email subscribe form at the bottom of the page --}}
+                {{#if @labs.subscribers}}
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    {{subscribe_form placeholder="youremail@example.com"}}
+                </section>
+                {{/if}}
+            {{/has}}
         </article>
 
     </div>
 </main>
 
 {{!-- Links to Previous/Next posts --}}
+
+{{^has window.location.href="variant=lite" }}
 <aside class="read-next outer">
     <div class="inner">
         <div class="read-next-feed">
@@ -134,7 +141,7 @@ into the {body} of the default.hbs template --}}
         </div>
     </div>
 </aside>
-
+{{/has}}
 {{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
 {{> floating-header}}
 
