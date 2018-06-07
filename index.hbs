@@ -31,7 +31,7 @@ into the {body} of the default.hbs template --}}
             </div>
         {{/get}}
         {{!-- Feed grouped by the tags --}}
-        {{#get "tags" limit="10" include="count.posts"  order="count.posts desc" }}
+        {{#get "tags" limit="50" include="count.posts"  order="count.posts desc" }}
             {{#foreach tags as |category|}}
                 {{#get "posts" limit="3" include="author" filter="primary_tag:{{slug}}+featured:false" order="published_at desc"}}
                     {{#foreach posts}}
