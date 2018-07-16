@@ -16,7 +16,7 @@ into the {body} of the default.hbs template --}}
         <div class="post-full-header ">
             <h1 class="post-title post-full-title">{{{title}}}</h1>
             <span class="post-meta">
-                {{author}} | {{#primary_tag}}<a href="{{url}}">{{name}}</a>{{/primary_tag}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
+                {{author}} | {{#primary_tag}}<a href="{{url}}">{{name}}</a>{{/primary_tag}} | <time datetime="{{date updated_at format='YYYY-MM-DD'}}">{{date updated_at format="DD MMM YYYY"}}</time></span>
             {{#if feature_image}}<div class="post-cover cover" style="background-image: url('{{feature_image}}');"></div>{{/if}}
         </div>
     </div>
