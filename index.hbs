@@ -30,7 +30,23 @@ into the {body} of the default.hbs template --}}
                 {{/foreach}}
             </div>
         {{/get}}
-        {{!-- Feed grouped by the tags --}}
+	{{!-- Latest posts --}}
+	{{#get "posts" limit="3" include="author" filter="featured:false"  as |recents|}}
+	    {{#foreach recents}}
+		{{!-- Only if there is at least one post in that tag  --}}
+                {{#if @first}}
+                    <div class="tag-group" >
+                        <span  class="title">Recent Posts</span>
+                    </div>
+                    <div class="post-feed-3column">
+                {{/if}}
+                {{> "post-card"}}
+                {{#if @last}}
+                    </div>
+                {{/if}}
+	    {{/foreach}}
+	{{/get}}
+	{{!-- Feed grouped by the tags --}}
         {{#get "tags" limit="50" include="count.posts"  order="count.posts desc" }}
             {{#foreach tags as |category|}}
                 {{#get "posts" limit="3" include="author" filter="primary_tag:{{slug}}+featured:false" order="published_at desc"}}
