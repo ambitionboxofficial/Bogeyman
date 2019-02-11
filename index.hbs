@@ -3,7 +3,7 @@
 into the {body} of the default.hbs template --}}
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
-<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+<header class="homepage site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
     <div class="inner">
         <div class="site-header-content">
             <h1 class="site-title">
@@ -20,7 +20,7 @@ into the {body} of the default.hbs template --}}
 </header>
 
 {{!-- The main content area --}}
-<main id="site-main" class="site-main outer" role="main">
+<main id="site-main" class="homepage site-main outer" role="main">
     <div class="inner">
         {{!-- Single large feature post --}}
         {{#get "posts" limit="1" include="author,tags" filter="featured:true"}}

@@ -602,43 +602,43 @@ The first (most recent) post in the list is styled to be bigger than the others 
     }
 }
 @media (max-width: 700px) {
-    .post-card-image-link {
+    .homepage .post-card-image-link {
         display: inline-block;
         width: 100px;
         padding:10px;
         vertical-align: top;
     }
-    .post-card-content {
+    .homepage .post-card-content {
         width: calc(100% - 110px);
         display: inline-block;
     }
-    .post-card-image {
+    .homepage .post-card-image {
         width: 80px;
         height: 80px;
         border-radius: 5px;
     }
-    .post-card-excerpt {
+    .homepage .post-card-excerpt {
         display: none;
     }
-    .post-card-content-link {
+    .homepage .post-card-content-link {
         padding:10px 10px 0 0;
     }
-    .author-profile-image {
+    .homepage .author-profile-image {
         display: none;
     }
-    .post-card-meta {
+    .homepage .post-card-meta {
         padding:0 10px 10px 0;
     }
-    .post-card-tags {
+    .homepage .post-card-tags {
         display: none;
     }
-    .post-card-title {
+    .homepage .post-card-title {
         font-size: 1.6rem;
     }
-    .site-nav {
+    .homepage .site-nav {
         margin-bottom: 1.8rem;
     }
-    .featured-post {
+    .homepage .featured-post {
         margin-top: -4.5rem;
     }
 }
