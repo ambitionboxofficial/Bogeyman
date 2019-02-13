@@ -448,6 +448,9 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     padding: 25px 25px 0;
     color: var(--darkgrey);
 }
+.post-card-content-link:hover {
+    text-decoration: none;
+}
 
 .post-card-excerpt:hover {
     text-decoration: none;
