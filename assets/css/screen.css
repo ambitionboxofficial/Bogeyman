@@ -605,43 +605,43 @@ The first (most recent) post in the list is styled to be bigger than the others 
     }
 }
 @media (max-width: 700px) {
-    .homepage .post-card-image-link {
+    .homepage .post-card-image-link ,.read-next .post-card-image-link {
         display: inline-block;
         width: 100px;
         padding:10px;
         vertical-align: top;
     }
-    .homepage .post-card-content {
+    .homepage .post-card-content ,.read-next .post-card-content {
         width: calc(100% - 110px);
         display: inline-block;
     }
-    .homepage .post-card-image {
+    .homepage .post-card-image ,.read-next .post-card-image {
         width: 80px;
         height: 80px;
         border-radius: 5px;
     }
-    .homepage .post-card-excerpt {
+    .homepage .post-card-excerpt ,.read-next .post-card-excerpt {
         display: none;
     }
-    .homepage .post-card-content-link {
+    .homepage .post-card-content-link ,.read-next .post-card-content-link {
         padding:10px 10px 0 0;
     }
-    .homepage .author-profile-image {
+    .homepage .author-profile-image ,.read-next .author-profile-image {
         display: none;
     }
-    .homepage .post-card-meta {
+    .homepage .post-card-meta ,.read-next .post-card-meta {
         padding:0 10px 10px 0;
     }
-    .homepage .post-card-tags {
+    .homepage .post-card-tags ,.read-next .post-card-tags {
         display: none;
     }
-    .homepage .post-card-title {
+    .homepage .post-card-title ,.read-next .post-card-title {
         font-size: 1.6rem;
     }
-    .homepage .site-nav {
+    .homepage .site-nav ,.read-next .site-nav {
         margin-bottom: 1.8rem;
     }
-    .homepage .featured-post {
+    .homepage .featured-post ,.read-next .featured-post {
         margin-top: -4.5rem;
     }
 }
@@ -1261,11 +1261,13 @@ Usage (In Ghost editor):
 #post-tags a{
     box-shadow: none;
     background-color: #3eb0ef2b;
-    padding: 0.3em 0.8em;
+    padding: 0.5em 0.8em;
     margin-right: 0.5em;
     border-radius: 3px;
     display: inline-block;
     margin-bottom:0.5em;
+    line-height: 140%;
+    font-size: 0.8em;
 }
 
 /* 7.1. Subscribe Form
@@ -1459,6 +1461,12 @@ Usage (In Ghost editor):
 /* 7.4. Related posts
 /* ---------------------------------------------------------- */
 
+
+.read-next .section-heading{
+    text-align: center;
+    font-size: 2.6rem;
+    color:#090a0b;
+}
 .read-next-feed {
     display: flex;
     flex-wrap: wrap;
@@ -1597,7 +1605,12 @@ Usage (In Ghost editor):
 .read-next-card-footer a {
     color: #fff;
 }
-
+@media (max-width: 700px) {
+    .read-next .section-heading{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+}
 
 /* 7.5. Floating Header
 /* ---------------------------------------------------------- */
