@@ -70,7 +70,7 @@
     <div class="inner">
         <div class="read-next-feed">
             {{#if primary_tag}}
-            {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" include="author" limit="4" as |related_posts|}}
+            {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" include="author" limit="6" as |related_posts|}}
                 {{#if related_posts}}
                 <article class="read-next-card post">
                     <header class="read-next-card-header">
