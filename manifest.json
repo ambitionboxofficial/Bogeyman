@@ -1,51 +1,57 @@
 {
-  "name": "ReadKeyPoints",
-  "short_name": "ReadKeyPoints",
-  "start_url": "/?utm_source=pwa",
+  "name": "Naukri Blog",
+  "short_name": "Naukri Blog",
+  "start_url": "/blog/?utm_source=pwa",
+  "description": "Maximizing your career potential",
   "icons": [
         {
-            "src": "/assets/img/pwa-icons/icon-72x72.png",
-            "sizes": "72x72",
-            "type": "image/png"
+        "src": "//static.naukimg.com/s/5/135/i/appLaucherIcon/Naukri-mdpi.png",
+        "sizes": "48x48",
+        "type": "image/png"
         },
         {
-            "src": "/assets/img/pwa-icons/icon-96x96.png",
-            "sizes": "96x96",
-            "type": "image/png"
+        "src": "//static.naukimg.com/s/5/135/i/appLaucherIcon/Naukri-hdpi.png",
+        "sizes": "72x72",
+        "type": "image/png"
         },
         {
-            "src": "/assets/img/pwa-icons/icon-128x128.png",
-            "sizes": "128x128",
-            "type": "image/png"
+        "src": "//static.naukimg.com/s/5/135/i/appLaucherIcon/Naukri-xhdpi.png",
+        "sizes": "96x96",
+        "type": "image/png"
         },
         {
-            "src": "/assets/img/pwa-icons/icon-144x144.png",
-            "sizes": "144x144",
-            "type": "image/png"
+        "src": "//static.naukimg.com/s/5/135/i/appLaucherIcon/Naukri-xxhdpi.png",
+        "sizes": "144x144",
+        "type": "image/png"
         },
         {
-            "src": "/assets/img/pwa-icons/icon-152x152.png",
-            "sizes": "152x152",
-            "type": "image/png"
+        "src": "//static.naukimg.com/s/5/135/i/appLaucherIcon/Naukri-xxxhdpi.png",
+        "sizes": "168x168",
+        "type": "image/png"
         },
         {
-            "src": "/assets/img/pwa-icons/icon-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
+        "src": "//static.naukimg.com/s/5/135/i/appLaucherIcon/Naukri-xxxhdpi.png",
+        "sizes": "192x192",
+        "type": "image/png"
         },
         {
-            "src": "/assets/img/pwa-icons/icon-384x384.png",
-            "sizes": "384x384",
-            "type": "image/png"
+        "src": "//static.naukimg.com/s/5/135/i/appLaucherIcon/Naukri-256x256.png",
+        "sizes": "256x256",
+        "type": "image/png"
         },
         {
-            "src": "/assets/img/pwa-icons/icon-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
+        "src": "//static.naukimg.com/s/5/135/i/appLaucherIcon/Naukri-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png"
+        },
+        {
+        "src": "//static.naukimg.com/s/5/135/i/appLaucherIcon/Naukri-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
         }
     ],
   "theme_color": "#0f1c46",
-  "background_color": "#fff",
+  "background_color": "white",
   "display": "standalone",
-  "gcm_sender_id": "103953800507"
+  "orientation": "portrait"
 }

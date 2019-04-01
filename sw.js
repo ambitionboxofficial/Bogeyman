@@ -1,5 +1,5 @@
 const cacheName = 'blogCache';
-const offlineUrl = '/';
+const offlineUrl = '/blog/';
 
 /**
  * The event listener for the service worker installation
