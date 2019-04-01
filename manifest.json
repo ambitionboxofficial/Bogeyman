@@ -1,7 +1,7 @@
 {
-  "name": "Naukri Blog",
-  "short_name": "Naukri Blog",
-  "start_url": "/blog/?utm_source=pwa",
+  "name": "ReadKeyPoints",
+  "short_name": "ReadKeyPoints",
+  "start_url": "/?utm_source=pwa",
   "icons": [
         {
             "src": "/assets/img/pwa-icons/icon-72x72.png",
@@ -47,6 +47,5 @@
   "theme_color": "#0f1c46",
   "background_color": "#fff",
   "display": "standalone",
-  "scope": "/blog/",
   "gcm_sender_id": "103953800507"
 }
