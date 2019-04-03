@@ -1,7 +1,7 @@
 {
   "name": "Naukri Blog",
   "short_name": "Naukri Blog",
-  "start_url": "/blog/?utm_source=pwa",
+  "start_url": "/blog/?utm_source=pwa&utm_medium=pwa",
   "description": "Maximizing your career potential",
   "icons": [
         {
