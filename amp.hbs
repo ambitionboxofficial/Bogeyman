@@ -116,6 +116,19 @@
     <footer class="site-footer clearfix">
         <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
     </footer>
+    <amp-experiment>
+      <script type="application/json">
+        {
+          "AMPReadMore": {
+            "sticky": true,
+            "variants": {
+              "0": 80,
+              "1": 20,
+            }
+          }
+        }
+      </script>
+    </amp-experiment>
     <amp-analytics type="googleanalytics">
         <script type="application/json">
         {
@@ -138,18 +151,5 @@
         }
         </script>
     </amp-analytics>
-    <amp-experiment>
-  <script type="application/json">
-    {
-      "AMPReadMore": {
-        "sticky": true,
-        "variants": {
-          "0": 80,
-          "1": 20,
-        }
-      }
-    }
-  </script>
-</amp-experiment>
 </body>
 </html>
