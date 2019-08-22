@@ -23,8 +23,8 @@
     {{!-- The AMP boilerplate --}}
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-experiment" src="https://cdn.ampproject.org/v0/amp-experiment-0.1.js"></script>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
     {{amp_components}}
     <link rel="manifest" href="{{@blog.url}}/manifest.json">    
 </head>
@@ -122,15 +122,34 @@
           "vars": {
             "account": "UA-116469595-1"
           },
+            "requests": {
+             "experiment": "${pageview}&xid=${xid}&xvar=${xvar}"
+          },
           "triggers": {
             "trackPageview": {
               "on": "visible",
-              "request": "pageview"
+              "request": "experiment",
+               "vars": {
+                 "xid": "0X83Ul_QTDitlUygdsp5mA",
+                 "xvar": "VARIANT(Article AMP page)"
+               }
             }
           }
         }
         </script>
     </amp-analytics>
-    <amp-install-serviceworker src="{{@blog.url}}/sw.js" layout="nodisplay"></amp-install-serviceworker> 
+    <amp-experiment>
+  <script type="application/json">
+    {
+      "Article AMP page": {
+        "sticky": true,
+        "variants": {
+          "0": 80,
+          "1": 20,
+        }
+      }
+    }
+  </script>
+</amp-experiment>
 </body>
 </html>
