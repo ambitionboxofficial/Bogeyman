@@ -89,18 +89,21 @@ body {
 /* ---------------------------------------------------------- */
 
 @media (min-width: 900px) {
+
     .home-template .post-feed,
     .tag-template .post-feed,
     .author-template .post-feed {
         margin-top: -70px;
         padding-top: 0;
     }
+
     .home-template .featured-post,
     .tag-template .featured-post,
     .author-template .featured-post {
         margin-top: -70px;
         padding-top: 0;
     }
+
     .home-template .site-nav {
         position: relative;
         top: -70px;
@@ -117,11 +120,17 @@ body {
     padding-bottom: 12px;
     color: #fff;
     background-size: cover;
-    background: var(--darkblue); /* Old browsers */
-    background: -moz-linear-gradient(left, var(--darkblue) 0%, var(--darkblue2) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, var(--darkblue) 0%,var(--darkblue2) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, var(--darkblue) 0%,var(--darkblue2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e122c', endColorstr='#10224f',GradientType=1 ); 
+    background: var(--darkblue);
+    /* Old browsers */
+    background: -moz-linear-gradient(left, var(--darkblue) 0%, var(--darkblue2) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, var(--darkblue) 0%, var(--darkblue2) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, var(--darkblue) 0%, var(--darkblue2) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0e122c', endColorstr='#10224f', GradientType=1);
+    background-size: cover;
+    background-position: center;
 }
 
 .site-header:before {
@@ -133,7 +142,7 @@ body {
     left: 0;
     z-index: 10;
     display: block;
-    background: rgba(0,0,0,0.58);
+    background: rgba(0, 0, 0, 0.58);
     /*background: linear-gradient(0deg,transparent 0,rgba(0,0,0,.3));
     height: 70px;*/
 }
@@ -148,7 +157,7 @@ body {
     z-index: 10;
     display: block;
     height: 80px;
-    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0));
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
 }
 
 .site-header.no-cover:before,
@@ -189,12 +198,40 @@ body {
     opacity: 0.8;
 }
 
+.tags-page .site-description {
+    font-size: 2rem;
+}
+
 @media (max-width: 500px) {
     .site-title {
         font-size: 3rem;
     }
+
     .site-description {
         font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .site-title {
+        font-size: 3rem;
+    }
+
+    .site-description {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .tags-page .site-title {
+        font-size: 2.5rem;
+        width: 100%;
+        text-align: left;
+    }
+
+    .tags-page .site-description {
+        font-size: 1.3rem;
+        text-align: left;
     }
 }
 
@@ -372,10 +409,12 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
         padding-right: 0;
         padding-left: 0;
     }
+
     .site-nav-left {
         margin-right: 0;
         padding-left: 4vw;
     }
+
     .site-nav-right {
         display: none;
     }
@@ -384,30 +423,35 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 /* 6. Post Feed
 /* ---------------------------------------------------------- */
-.tag-group {
+.tag-group {}
 
-}
-.tag-group  .title{
+.tag-group .title {
     font-size: 1.5em;
     font-weight: 200;
 }
-.tag-group .see-all{
+
+.tag-group .see-all {
     text-transform: uppercase;
     font-size: 0.75em;
     margin-left: 0.3em;
     color: var(--green);
     font-weight: bold;
 }
-.post-feed ,.post-feed-3column ,.featured-post{
+
+.post-feed,
+.post-feed-3column,
+.featured-post {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     margin: 0 -20px;
     padding: 40px 0 0 0;
 }
+
 .post-feed-3column {
     padding: 20px 0 0 0;
 }
+
 .post-card {
     flex: 1 1 300px;
     display: flex;
@@ -418,12 +462,12 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     background: #fff center center;
     background-size: cover;
     border-radius: 5px;
-    box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+    box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
     transition: all 0.5s ease;
 }
 
 .post-card:hover {
-    box-shadow: 0 0 1px rgba(39,44,49,0.10), 0 3px 16px rgba(39, 44, 49,0.07);
+    box-shadow: 0 0 1px rgba(39, 44, 49, 0.10), 0 3px 16px rgba(39, 44, 49, 0.07);
     transition: all 0.3s ease;
     transform: translate3D(0, -1px, 0);
 }
@@ -448,6 +492,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     padding: 25px 25px 0;
     color: var(--darkgrey);
 }
+
 .post-card-content-link:hover {
     text-decoration: none;
 }
@@ -501,6 +546,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     letter-spacing: 0.5px;
     color: var(--darkgrey);
 }
+
 .post-card-author a {
     color: inherit;
 }
@@ -549,6 +595,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-meta {
         padding: 0 40px 30px;
     }
+
     .home-template .featured-post .post-card:nth-child(6n+1):not(.no-image) {
         flex: 1 1 100%;
         flex-direction: row;
@@ -595,53 +642,79 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 /* Adjust some margins for smaller screens */
 @media (max-width: 650px) {
-    .post-feed ,.featured-post{
+
+    .post-feed,
+    .featured-post {
         padding-top: 5vw;
     }
+
     .post-card {
         margin: 0 10px 5vw;
         display: block;
         min-height: auto;
     }
 }
+
 @media (max-width: 700px) {
-    .homepage .post-card-image-link ,.read-next .post-card-image-link {
+
+    .homepage .post-card-image-link,
+    .read-next .post-card-image-link {
         display: inline-block;
         width: 100px;
-        padding:10px;
+        padding: 10px;
         vertical-align: top;
     }
-    .homepage .post-card-content ,.read-next .post-card-content {
+
+    .homepage .post-card-content,
+    .read-next .post-card-content {
         width: calc(100% - 110px);
         display: inline-block;
     }
-    .homepage .post-card-image ,.read-next .post-card-image {
+
+    .homepage .post-card-image,
+    .read-next .post-card-image {
         width: 80px;
         height: 80px;
         border-radius: 5px;
     }
-    .homepage .post-card-excerpt ,.read-next .post-card-excerpt {
+
+    .homepage .post-card-excerpt,
+    .read-next .post-card-excerpt {
         display: none;
     }
-    .homepage .post-card-content-link ,.read-next .post-card-content-link {
-        padding:10px 10px 0 0;
+
+    .homepage .post-card-content-link,
+    .read-next .post-card-content-link {
+        padding: 10px 10px 0 0;
     }
-    .homepage .author-profile-image ,.read-next .author-profile-image {
+
+    .homepage .author-profile-image,
+    .read-next .author-profile-image {
         display: none;
     }
-    .homepage .post-card-meta ,.read-next .post-card-meta {
-        padding:0 10px 10px 0;
+
+    .homepage .post-card-meta,
+    .read-next .post-card-meta {
+        padding: 0 10px 10px 0;
     }
-    .homepage .post-card-tags ,.read-next .post-card-tags {
+
+    .homepage .post-card-tags,
+    .read-next .post-card-tags {
         display: none;
     }
-    .homepage .post-card-title ,.read-next .post-card-title {
+
+    .homepage .post-card-title,
+    .read-next .post-card-title {
         font-size: 1.6rem;
     }
-    .homepage .site-nav ,.read-next .site-nav {
+
+    .homepage .site-nav,
+    .read-next .site-nav {
         margin-bottom: 1.8rem;
     }
-    .homepage .featured-post ,.read-next .featured-post {
+
+    .homepage .featured-post,
+    .read-next .featured-post {
         margin-top: -4.5rem;
     }
 }
@@ -654,6 +727,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     position: relative;
     padding-top: 6em;
 }
+
 /*#post-header .inner{
     padding: 0 100px;
 }*/
@@ -661,9 +735,10 @@ The first (most recent) post in the list is styled to be bigger than the others 
     padding: 16em 0 0.5em;
     background: black;
     overflow: hidden;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-/*    margin-top: -64px;*/
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    /*    margin-top: -64px;*/
 }
+
 .post-cover {
     position: absolute;
     width: 100%;
@@ -674,6 +749,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     background: no-repeat scroll center center / cover black;
     animation: 0.5s ease-in forwards fadein;
 }
+
 .post-cover:after {
     position: absolute;
     width: 100%;
@@ -682,20 +758,21 @@ The first (most recent) post in the list is styled to be bigger than the others 
     bottom: 0;
     z-index: 8;
     content: '';
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
-    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 
 @font-face {
-  font-family: 'Fira Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Fira Sans Bold'), local('FiraSans-Bold'), url('//fonts.gstatic.com/s/firasans/v5/DugPdSljmOTocZOR2CItOhampu5_7CjHW5spxoeN3Vs.woff2') format('woff2'), url('//fonts.gstatic.com/s/firasans/v5/DugPdSljmOTocZOR2CItOqRDOzjiPcYnFooOUGCOsRk.woff') format('woff');
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Fira Sans Bold'), local('FiraSans-Bold'), url('//fonts.gstatic.com/s/firasans/v5/DugPdSljmOTocZOR2CItOhampu5_7CjHW5spxoeN3Vs.woff2') format('woff2'), url('//fonts.gstatic.com/s/firasans/v5/DugPdSljmOTocZOR2CItOqRDOzjiPcYnFooOUGCOsRk.woff') format('woff');
 }
+
 .post-title {
     position: relative;
     z-index: 10;
-    margin-bottom:1.2rem !important;
+    margin-bottom: 1.2rem !important;
     line-height: 120%;
     font-weight: 700;
     text-indent: -1px;
@@ -703,14 +780,17 @@ The first (most recent) post in the list is styled to be bigger than the others 
     font-family: 'Fira Sans', sans-serif;
     text-rendering: optimizeLegibility;
 }
+
 .has-cover .post-title {
     color: white;
 }
+
 .post-title a {
     text-decoration: none;
     color: inherit;
     font-weight: inherit;
 }
+
 .post-meta {
     position: relative;
     z-index: 10;
@@ -721,26 +801,29 @@ The first (most recent) post in the list is styled to be bigger than the others 
     line-height: 1.334em;
     opacity: 0.5;
 }
+
 .has-cover .post-meta {
     color: white;
     opacity: 0.75;
 }
+
 .post-meta a {
     color: inherit;
     text-decoration: none;
     border-bottom: 1px solid transparent;
 }
+
 .post-meta a:hover,
 .post-meta a:focus {
-    border-color: rgba(0,0,0,0.5);
-}
-.has-cover .post-meta a:hover,
-.has-cover .post-meta a:focus {
-    border-color: rgba(255,255,255,0.5);
+    border-color: rgba(0, 0, 0, 0.5);
 }
 
------
-.post-template .site-main,
+.has-cover .post-meta a:hover,
+.has-cover .post-meta a:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+----- .post-template .site-main,
 .page-template .site-main {
     padding-bottom: 4vw;
     background: #fff;
@@ -750,6 +833,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     position: relative;
     z-index: 50;
 }
+
 /* ^ Required to make .post-full-content:before/after z-index stacking work */
 
 .post-full-header {
@@ -757,6 +841,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     padding: 0 100px 0;
     max-width: 1040px;
 }
+
 @media (max-width: 500px) {
     .post-full-header {
         padding: 14vw 3vw 10vw;
@@ -823,50 +908,62 @@ The first (most recent) post in the list is styled to be bigger than the others 
     .post-full-content {
         padding: 5vw 7vw 0;
     }
+
     .post-full-header {
         padding: 0 11vw 0;
     }
 }
+
 @media (max-width: 800px) {
     .post-full-content {
         font-size: 1.9rem;
     }
+
     #post-header.has-cover {
         padding: 13em 0 .5em;
     }
 }
+
 @media only screen and (max-width: 480px) {
     .inner {
         padding: 0 16px;
     }
+
     .post-template #main-header {
         padding: 16px 0;
     }
+
     #main-nav a {
         margin: 16px;
     }
+
     .container .post.featured .post-title:after {
         left: 0;
         top: -1.75em;
     }
+
     .post-content img,
     .post-content .fluid-width-video-wrapper {
         width: 100%;
         margin-left: auto;
     }
+
     .post-nav:after {
         display: none;
     }
+
     .post-nav-next,
     .post-nav-prev {
         display: block;
         width: 100%;
     }
+
     .post-nav-teaser {
         position: relative;
         min-height: 4em;
         padding: 2em 0;
     }
+
     .post-nav-next .post-nav-teaser:after {
         position: absolute;
         content: '';
@@ -878,20 +975,25 @@ The first (most recent) post in the list is styled to be bigger than the others 
         background: $color-gray-90;
         z-index: 2;
     }
+
     .post-nav-next .post-nav-teaser {
         padding-right: 0;
         padding-left: 1.5em;
     }
+
     .post-nav-prev .post-nav-teaser {
         padding-left: 0;
         padding-right: 1.5em;
     }
+
     .post-nav-next i {
         margin-left: -1em;
     }
+
     .post-nav-prev i {
         margin-right: -1em;
     }
+
     #post-header.has-cover {
         padding: 11em 0 .5em;
     }
@@ -967,7 +1069,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
     margin: 1.5em auto;
     max-width: 1040px;
 }
+
 @media (max-width: 1040px) {
+
     .post-full-content img,
     .post-full-content video {
         width: 100%;
@@ -997,7 +1101,7 @@ Usage (In Ghost editor):
 <small>Your image caption</small>
 
 */
-.post-full-content img + br + small {
+.post-full-content img+br+small {
     display: block;
     margin-top: -3em;
     margin-bottom: 1.5em;
@@ -1030,7 +1134,7 @@ Usage (In Ghost editor):
     padding: 0 5px 2px;
     font-size: 0.8em;
     line-height: 1em;
-    font-weight: 400!important;
+    font-weight: 400 !important;
     background: var(--whitegrey);
     border-radius: 3px;
 }
@@ -1090,6 +1194,7 @@ Usage (In Ghost editor):
     color: color(var(--darkgrey) l(-5%));
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
 .post-full-content .content-box {
     background: color(var(--whitegrey) l(+4%));
     border-radius: 4px;
@@ -1097,11 +1202,13 @@ Usage (In Ghost editor):
     border: color(var(--whitegrey) l(+2%)) 1px solid;
 
 }
+
 .post-full-content h1 {
     margin: 0.5em 0 0.2em 0;
     font-size: 4.6rem;
     font-weight: 700;
 }
+
 @media (max-width: 500px) {
     .post-full-content h1 {
         font-size: 2.8rem;
@@ -1114,6 +1221,7 @@ Usage (In Ghost editor):
     font-size: 3.6rem;
     font-weight: 700;
 }
+
 @media (max-width: 500px) {
     .post-full-content h2 {
         font-size: 2.6rem;
@@ -1125,6 +1233,7 @@ Usage (In Ghost editor):
     font-size: 2.8rem;
     font-weight: 700;
 }
+
 @media (max-width: 500px) {
     .post-full-content h3 {
         font-size: 2.2rem;
@@ -1136,6 +1245,7 @@ Usage (In Ghost editor):
     font-size: 2.8rem;
     font-weight: 700;
 }
+
 @media (max-width: 500px) {
     .post-full-content h4 {
         font-size: 2.2rem;
@@ -1148,17 +1258,19 @@ Usage (In Ghost editor):
     padding: 1em 0 1.5em;
     border: 0;
     color: var(--blue);
-    font-family: Georgia,serif;
+    font-family: Georgia, serif;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
 }
+
 @media (min-width: 1180px) {
     .post-full-content h5 {
         max-width: 1060px;
         width: 100vw;
     }
 }
+
 @media (max-width: 500px) {
     .post-full-content h5 {
         padding: 0 0 0.5em;
@@ -1171,6 +1283,7 @@ Usage (In Ghost editor):
     font-size: 2.3rem;
     font-weight: 700;
 }
+
 @media (max-width: 500px) {
     .post-full-content h6 {
         font-size: 2rem;
@@ -1203,20 +1316,25 @@ Usage (In Ghost editor):
         font-size: 1.2rem;
         line-height: 1.3em;
     }
+
     .post-full-title {
         font-size: 2.9rem;
     }
+
     .post-full-image {
         margin-bottom: 4vw;
         height: 350px;
     }
+
     .post-full-content {
         padding: 0;
         padding-top: 2em;
     }
-    .post-full-header{
-        padding:0 4vw; 
+
+    .post-full-header {
+        padding: 0 4vw;
     }
+
     .post-full-content:before,
     .post-full-content:after {
         display: none;
@@ -1247,25 +1365,29 @@ Usage (In Ghost editor):
     text-transform: uppercase;
     background-color: color(var(--whitegrey) l(+4%));
 }
+
 .post-full-content table tr:first-child {
     background: var(--whitegrey);
 }
+
 .post-full-content table th,
 .post-full-content table td {
     padding: 6px 12px;
     border: color(var(--whitegrey) l(-1%) s(-5%)) 1px solid;
 }
+
 #post-tags {
     margin-top: 3vw;
 }
-#post-tags a{
+
+#post-tags a {
     box-shadow: none;
     background-color: #3eb0ef2b;
     padding: 0.5em 0.8em;
     margin-right: 0.5em;
     border-radius: 3px;
     display: inline-block;
-    margin-bottom:0.5em;
+    margin-bottom: 0.5em;
     line-height: 140%;
     font-size: 0.8em;
 }
@@ -1344,11 +1466,11 @@ Usage (In Ghost editor):
     line-height: 37px;
     font-weight: 400;
     text-align: center;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
 
     background: color(var(--green));
     border-radius: 5px;
-    box-shadow: 0 0 0 1px inset rgba(0,0,0,0.14);
+    box-shadow: 0 0 0 1px inset rgba(0, 0, 0, 0.14);
 
     -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -1362,6 +1484,7 @@ Usage (In Ghost editor):
     .subscribe-form-title {
         font-size: 2.4rem;
     }
+
     .subscribe-form p {
         font-size: 1.6rem;
     }
@@ -1371,9 +1494,11 @@ Usage (In Ghost editor):
     .subscribe-form form {
         flex-direction: column;
     }
+
     .subscribe-form .form-group {
         width: 100%;
     }
+
     .subscribe-form button {
         margin: 10px 0 0 0;
         width: 100%;
@@ -1462,11 +1587,12 @@ Usage (In Ghost editor):
 /* ---------------------------------------------------------- */
 
 
-.read-next .section-heading{
+.read-next .section-heading {
     text-align: center;
     font-size: 2.6rem;
-    color:#090a0b;
+    color: #090a0b;
 }
+
 .read-next-feed {
     display: flex;
     flex-wrap: wrap;
@@ -1486,7 +1612,7 @@ Usage (In Ghost editor):
     background: var(--darkgrey) center center;
     background-size: cover;
     border-radius: 5px;
-    box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+    box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
 }
 
 .read-next-card:before {
@@ -1497,7 +1623,7 @@ Usage (In Ghost editor):
     bottom: 0;
     left: 0;
     display: block;
-    background: linear-gradient(135deg, rgba(0,40,60,0.8) 0%,rgba(0,20,40,0.7) 100%);
+    background: linear-gradient(135deg, rgba(0, 40, 60, 0.8) 0%, rgba(0, 20, 40, 0.7) 100%);
     border-radius: 5px;
 
     backdrop-filter: blur(2px);
@@ -1581,7 +1707,7 @@ Usage (In Ghost editor):
 .read-next-card-content li a {
     display: block;
     padding: 20px 0;
-    border-bottom: rgba(255,255,255,0.3) 1px solid;
+    border-bottom: rgba(255, 255, 255, 0.3) 1px solid;
     color: #fff;
     font-weight: 500;
     vertical-align: top;
@@ -1605,8 +1731,9 @@ Usage (In Ghost editor):
 .read-next-card-footer a {
     color: #fff;
 }
+
 @media (max-width: 700px) {
-    .read-next .section-heading{
+    .read-next .section-heading {
         text-align: center;
         font-size: 1.8rem;
     }
@@ -1625,8 +1752,8 @@ Usage (In Ghost editor):
     display: flex;
     align-items: center;
     height: 60px;
-    border-bottom: rgba(0,0,0,0.06) 1px solid;
-    background: rgba(255,255,255,0.95);
+    border-bottom: rgba(0, 0, 0, 0.06) 1px solid;
+    background: rgba(255, 255, 255, 0.95);
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
     transform: translate3d(0, -120%, 0);
 }
@@ -1707,7 +1834,7 @@ Usage (In Ghost editor):
     display: flex;
     align-items: center;
     margin-right: 10px;
-    color: rgba(0,0,0,0.7);
+    color: rgba(0, 0, 0, 0.7);
     font-weight: 500;
 }
 
@@ -1715,7 +1842,7 @@ Usage (In Ghost editor):
     margin: 0 5px 0 10px;
     width: 18px;
     height: 18px;
-    stroke: rgba(0,0,0,0.7);
+    stroke: rgba(0, 0, 0, 0.7);
     transform: rotate(90deg);
 }
 
@@ -1786,10 +1913,12 @@ Usage (In Ghost editor):
     .floating-header {
         height: 40px;
     }
+
     .floating-header-title,
     .floating-header-logo {
         font-size: 1.5rem;
     }
+
     .floating-header-share-tw,
     .floating-header-share-fb {
         width: 40px;
@@ -1802,9 +1931,11 @@ Usage (In Ghost editor):
     .floating-header-logo {
         margin-left: 10px;
     }
+
     .floating-header-logo a {
         color: #2e2e2e;
     }
+
     .floating-header-title,
     .floating-header-divider {
         visibility: hidden;
@@ -1827,7 +1958,7 @@ Usage (In Ghost editor):
     margin: 0 0 20px 0;
     width: 100px;
     height: 100px;
-    box-shadow: rgba(255,255,255,0.1) 0 0 0 6px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 6px;
 }
 
 .site-header-content .author-bio {
@@ -1874,6 +2005,7 @@ Usage (In Ghost editor):
         line-height: 1.15em;
         letter-spacing: 0;
     }
+
     .author-location,
     .author-stats {
         display: none;
@@ -1949,7 +2081,7 @@ Usage (In Ghost editor):
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0,25,40,0.97);
+    background: rgba(0, 25, 40, 0.97);
     opacity: 0;
     transition: opacity 200ms ease-in;
     pointer-events: none;
@@ -2040,10 +2172,10 @@ Usage (In Ghost editor):
     line-height: 37px;
     font-weight: 400;
     text-align: center;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background:color(var(--green));
-    box-shadow: 0 0 0 1px inset rgba(0,0,0,0.14);
+    background: color(var(--green));
+    box-shadow: 0 0 0 1px inset rgba(0, 0, 0, 0.14);
 
     -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -2109,16 +2241,16 @@ Usage (In Ghost editor):
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 1.3rem;
 }
 
 .site-footer-content a {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .site-footer-content a:hover {
-    color: rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
     text-decoration: none;
 }
 
@@ -2151,6 +2283,7 @@ Usage (In Ghost editor):
     .site-footer-content {
         flex-direction: column;
     }
+
     .site-footer-nav a:first-child {
         margin-left: 0;
     }

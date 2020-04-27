@@ -9,15 +9,16 @@
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
 {{#tag}}
-<header class="site-header outer {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
+<header class="tags-page site-header outer {{#if feature_image}}"
+    style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
     <div class="inner">
         <div class="site-header-content">
             <h1 class="site-title">{{name}}</h1>
             <h2 class="site-description">
                 {{#if description}}
-                    {{description}}
+                {{description}}
                 {{else}}
-                    A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+                A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
                 {{/if}}
             </h2>
         </div>
@@ -26,12 +27,12 @@
 {{/tag}}
 
 {{!-- The main content area --}}
-<main id="site-main" class="site-main outer" role="main">
+<main id="site-main" class="homepage site-main outer" role="main">
     <div class="inner">
         <div class="post-feed">
             {{#foreach posts}}
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card"}}
             {{/foreach}}
         </div>
     </div>
